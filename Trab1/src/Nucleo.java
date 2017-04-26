@@ -40,7 +40,8 @@ public class Nucleo {
 		return arr;
 	}
 
-	public static void main(String args[]) throws IOException {
+	
+	public static void main(String [] args) throws IOException {
 
 		Eucariote = new Reader(Euca);
 		Influenza = new Reader(Infl);
@@ -57,11 +58,16 @@ public class Nucleo {
 
 		/**
 		 * totais de nucleotideos no material codificador
-		 */
+		
 		sequence_rna = Count.DNAtoRNA(bases_dna, sequence);
 		Count.count_bases_RNA(bases_rna, sequence_rna);
 		sequence_rna_2=Count.DNAtoRNA(bases_dna, sequence2);
 		Count.count_bases_RNA(bases_rna, sequence_rna_2);
-
+		 */
+	
+		/**
+		 * transitions and probability
+		 */
+		Transitions transitions = new Transitions(bases_dna, sequence, sequence2);
 	}
 }

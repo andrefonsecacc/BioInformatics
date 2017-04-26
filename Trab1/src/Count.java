@@ -27,6 +27,9 @@ public class Count {
 		}
 		System.out.println("Base A: " + count_A + "\n" + "Base C: " + count_C + "\n" + "Base G: " + count_G + "\n"
 				+ "Base T: " + count_T + "\n");
+		
+		int total= count_A+count_C+count_G+count_T;
+		System.out.println("Total de bases de DNA: " +total + "\n");
 
 	}
 
