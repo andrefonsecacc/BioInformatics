@@ -69,5 +69,6 @@ public class Nucleo {
 		 * transitions and probability
 		 */
 		Transitions transitions = new Transitions(bases_dna, sequence, sequence2);
+		transitions.print_matrix();
 	}
 }

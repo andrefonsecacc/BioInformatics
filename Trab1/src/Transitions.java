@@ -26,6 +26,25 @@ public class Transitions {
 		fill_Matrix(sequence_dna, sequence_dna_2);
 	}
 
+	
+	public void print_matrix(){
+		for (int row = 0; row < transitionMatrix.length; row++) {
+		    for (int column = 0; column < transitionMatrix[row].length; column++) {
+		        System.out.print(transitionMatrix[row][column] + " ");
+		    }
+		    System.out.println();
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	/**
 	 * Just get sequence of DNA
 	 * 
@@ -42,7 +61,7 @@ public class Transitions {
 				k++;
 			}
 		}
-		System.out.println(k);
+		//System.out.println(k);
 
 		int j = 0;
 		String[] arr = new String[k];
@@ -73,51 +92,90 @@ public class Transitions {
 		} else {
 			minLen = sequence2.length;
 		}
+		
+		
+		/*debug*/
+		for (int i = 0; i <minLen; i++) {
+			if (sequence[i] == null) {
+				break;
+			}
+			System.out.print(sequence[i]);
+		}
+		System.out.println();
+		for (int i = 0; i <minLen; i++) {
+			if (sequence2[i] == null) {
+				break;
+			}
+			System.out.print(sequence2[i]);
+		}
+		System.out.println();	
+		/**/
+		
+		
 		/* sequence is rows */
-		for (int i = 0; i <= minLen; i++) {
-			if (sequence[i].equals("U")) {
-				if (sequence2[i].equals("U")) {
+		for (int i = 0; i < minLen; i++) {
+			
+			if (sequence[i].equals("A")) {
+				if (sequence2[i].equals("A")) {
 					transitionMatrix[0][0]++;
-				} else if (sequence2[i].equals("C")) {
+				}
+				if (sequence2[i].equals("C")) {
 					transitionMatrix[0][1]++;
-				} else if (sequence2[i].equals("A")) {
+				}
+				if (sequence2[i].equals("G")) {
 					transitionMatrix[0][2]++;
-				} else {
+				}
+				if (sequence2[i].equals("T")) {
 					transitionMatrix[0][3]++;
 				}
-			} else if (sequence[i].equals("C")) {
-				if (sequence2[i].equals("U")) {
+			}
+
+			if (sequence[i].equals("C")) {
+				if (sequence2[i].equals("A")) {
 					transitionMatrix[1][0]++;
-				} else if (sequence2[i].equals("C")) {
+				}
+				if (sequence2[i].equals("C")) {
 					transitionMatrix[1][1]++;
-				} else if (sequence2[i].equals("A")) {
+				}
+				if (sequence2[i].equals("G")) {
 					transitionMatrix[1][2]++;
-				} else {
+				}
+				if (sequence2[i].equals("T")) {
 					transitionMatrix[1][3]++;
 				}
-			} else if (sequence[i].equals("A")) {
-				if (sequence2[i].equals("U")) {
+			}
+
+			if (sequence[i].equals("G")) {
+				if (sequence2[i].equals("A")) {
 					transitionMatrix[2][0]++;
-				} else if (sequence2[i].equals("C")) {
+				}
+				if (sequence2[i].equals("C")) {
 					transitionMatrix[2][1]++;
-				} else if (sequence2[i].equals("A")) {
+				}
+				if (sequence2[i].equals("G")) {
 					transitionMatrix[2][2]++;
-				} else {
+				}
+				if (sequence2[i].equals("T")) {
 					transitionMatrix[2][3]++;
 				}
-			} else {
-				if (sequence2[i].equals("U")) {
+			}
+
+			if (sequence[i].equals("T")) {
+				if (sequence2[i].equals("A")) {
 					transitionMatrix[3][0]++;
-				} else if (sequence2[i].equals("C")) {
+				}
+				if (sequence2[i].equals("C")) {
 					transitionMatrix[3][1]++;
-				} else if (sequence2[i].equals("A")) {
+				}
+				if (sequence2[i].equals("G")) {
 					transitionMatrix[3][2]++;
-				} else {
+				}
+				if (sequence2[i].equals("T")) {
 					transitionMatrix[3][3]++;
 				}
 			}
-		}
 
+		}
 	}
 
 }
