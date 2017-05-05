@@ -97,7 +97,7 @@ public class Count {
 				k++;
 				}
 			}
-		System.out.println(k);
+		//System.out.println(k);
 			
 		int j = 0;
 		String[] arr = new String[k];
