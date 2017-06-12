@@ -21,9 +21,10 @@ A Classe Count.java responsavel pela contagem de nucleotideos, tanto conta as ba
   ```java 
   count_bases_DNA(String[] bases, String[] sequence);
   ```
-    ```java 
+  
+   ```java 
     count_bases_RNA(String[] bases, String[] sequence); 
-    ```
+   ```
   
 Ambas só necessitam da sequencia a analizar e as bases para cada uma das sequencias.
 De seguida e seguindo a estrutura dos tópicos proposto para o trabalho foi implementada a Classe Transitions.java que é responsável pela criação e preenchimento de uma matriz de transiçoes, a função responsavel é :
@@ -36,16 +37,18 @@ Só precisa que lhe forneçam duas sequencias para poder calcular o numero de tr
 Esta classe seria também responsável pela estimação de probabilidades mas fomos incapazes até o momento de implementar a solução.
 Para implementação do alinhamento Global foi criada a classe NeedlemanWunsch.java juntamente com as classes AlignmentResult.java e SimpleAlignmentParameters.java que servem como suporte para a implementação deste algoritmo.
 No algoritmo é de notar as seguintes funções:
-   ```java 
+  
+  ```java 
    dumpMatrix(int[][] matrix,String row,String column);
    ```  
+   
    ```java 
    computeNWAlignment(String seq1,String seq2,SimpleAlignmentParameters parameters); 
    ```
  
 Todas estas classes são controladas pela classe Main.java que é a responsável por lançar todos estes métodos, é de notar nesta classe a seguinte função:
 
- ```javas 
+ ```java 
  testNWAlignment(String seq1, String seq2); 
  ```
 
